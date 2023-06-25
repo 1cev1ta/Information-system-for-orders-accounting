@@ -104,7 +104,7 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
+* [![Java][Java.com]][Java-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
@@ -252,8 +252,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/boris-spirin-74ab55280
 [product-screenshot]: images/screenshot.png
-[Java]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Java]: https://www.java.com/
+[Java.com]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Java-url]: https://www.java.com/
 [IntellijIDEA]: https://img.shields.io/badge/IntellijIDEA-20232A?style=for-the-badge&logo=intellijidea&logoColor=61DAFB
 [IntellijIDEA]: https://www.jetbrains.com/idea/
 [SceneBuilder]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
