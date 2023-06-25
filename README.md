@@ -85,14 +85,20 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+There are many great JavaFX project templates available on GitHub; however, I didn't find one that really met my needs, so I created this program. This is a program from my thesis qualification work and it provides functionality for the work of managers of the company's sales department.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+The purpose of my graduation work was to increase the efficiency of the company through the development and implementation of an information system for accounting for orders for spare parts for electric vehicles.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+The tasks of the work were:
+• Conduct an analysis of the activities of the company for the sale of spare parts for electric vehicles;
+• Choose methods and tools for system development;
+• Design a database to record orders for spare parts for electric vehicles;
+• Develop a user interface for a team of company managers and an administrator;
+• Substantiate decisions to ensure the operational and information security of the developed system;
+• Conduct an economic calculation of the costs of developing the system.
+
+This repository provides a direct implementation of the user interface.
+In the future, the project can be developed and supplemented with new commits.
 
 Use the `BLANK_README.md` to get started.
 
