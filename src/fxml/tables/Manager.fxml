@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.tables.ManagerTableController">
+   <children>
+      <Text layoutX="341.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Менеджера">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <MFXButton buttonType="RAISED" layoutX="554.0" layoutY="63.0" onAction="#searchManager" prefHeight="26.0" prefWidth="75.0" text="Найти" />
+      <VBox layoutX="99.0" layoutY="237.0" spacing="12.0" />
+      <VBox layoutX="17.0" layoutY="50.0" spacing="40.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Менеджера " />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Телефон" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Опыт работы" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Заработная плата" />
+         </children>
+      </VBox>
+      <MFXButton buttonType="RAISED" layoutX="643.0" layoutY="63.0" onAction="#deleteManager" prefHeight="26.0" prefWidth="75.0" text="Удалить" />
+      <MFXButton buttonType="RAISED" layoutX="110.0" layoutY="327.0" onAction="#updateManager" text="Обновить" />
+      <MFXButton buttonType="RAISED" layoutX="207.0" layoutY="326.0" onAction="#insertManager" prefHeight="26.0" prefWidth="108.0" text="Добавить заказ" />
+      <Text layoutX="12.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Консоль результата" />
+      <TextArea fx:id="resultConsole_ManagerTable" layoutX="12.0" layoutY="413.0" prefHeight="122.0" prefWidth="303.0" />
+      <TableView fx:id="managerTable" layoutX="341.0" layoutY="107.0" onMouseClicked="#getSelected" prefHeight="427.0" prefWidth="754.0">
+         <columns>
+            <TableColumn fx:id="colManagerId" prefWidth="96.79998779296875" text="ID Менеджера" />
+            <TableColumn fx:id="colFIOManager" prefWidth="198.39996337890625" text="ФИО" />
+            <TableColumn fx:id="colPhoneManager" minWidth="0.0" prefWidth="163.20001220703125" text="Телефон" />
+            <TableColumn fx:id="colExpManager" prefWidth="127.20013427734375" text="Опыт работы" />
+            <TableColumn fx:id="colSalaryManager" minWidth="0.0" prefWidth="166.39984130859375" text="Заработная плата" />
+         </columns>
+      </TableView>
+      <MFXButton buttonType="RAISED" layoutX="734.0" layoutY="63.0" onAction="#searchAllManagers" prefHeight="26.0" prefWidth="75.0" text="Найти все" />
+      <MFXButton buttonType="RAISED" layoutX="12.0" layoutY="327.0" onAction="#clearTextFields" text="Очистить" />
+      <VBox layoutX="125.0" layoutY="46.0" spacing="30.0">
+         <children>
+            <TextField fx:id="txtManagerID" prefHeight="26.0" prefWidth="190.0" promptText="Введите ID менеджера " />
+            <TextField fx:id="txtFIOManager" prefHeight="26.0" prefWidth="150.0" promptText="Введите ФИО менеджера" />
+            <TextField fx:id="txtPhoneManager" prefHeight="26.0" prefWidth="150.0" promptText="Введите телефон менеджера" />
+            <TextField fx:id="txtExpManager" prefHeight="26.0" prefWidth="150.0" promptText="Введите опыт работы" />
+            <TextField fx:id="txtSalaryManager" prefHeight="26.0" prefWidth="150.0" promptText="Введите зарплату" />
+         </children>
+      </VBox>
+      <Text layoutX="17.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление/Обновление данных заказа">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="341.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск/Удаление данных в таблице">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="searchManagerId" layoutX="437.0" layoutY="63.0" prefHeight="26.0" prefWidth="98.0" promptText="ID Менеджера" />
+      <Separator layoutX="325.0" layoutY="3.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="5.0" />
+      <Separator layoutX="-1.0" layoutY="369.0" prefHeight="6.0" prefWidth="329.0" />
+   </children>
+</AnchorPane>

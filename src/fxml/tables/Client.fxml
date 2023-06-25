@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="351.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="№ Клиента">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <MFXButton buttonType="RAISED" layoutX="533.0" layoutY="62.0" prefHeight="26.0" prefWidth="75.0" text="Найти" />
+      <VBox layoutX="99.0" layoutY="237.0" spacing="12.0" />
+      <VBox layoutX="27.0" layoutY="50.0" spacing="50.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="№ Клиента" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Пол" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения" />
+         </children>
+      </VBox>
+      <MFXButton buttonType="RAISED" layoutX="622.0" layoutY="62.0" prefHeight="26.0" prefWidth="75.0" text="Удалить" />
+      <MFXButton buttonType="RAISED" layoutX="110.0" layoutY="295.0" text="Обновить" />
+      <MFXButton buttonType="RAISED" layoutX="207.0" layoutY="294.0" prefHeight="26.0" prefWidth="108.0" text="Добавить заказ" />
+      <Text layoutX="15.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Консоль результата" />
+      <TextArea fx:id="resultConsole" layoutX="12.0" layoutY="388.0" prefHeight="145.0" prefWidth="303.0" />
+      <TableView fx:id="employeeTable" layoutX="341.0" layoutY="107.0" prefHeight="427.0" prefWidth="448.0" editable="true">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="79.20001220703125" text="№ Клиента" />
+            <TableColumn fx:id="colFIOClient" prefWidth="168.0" text="ФИО" />
+            <TableColumn fx:id="colFIOManager" prefWidth="70.4000244140625" text="Пол" />
+            <TableColumn fx:id="colDetailName" prefWidth="127.2000732421875" text="Дата рождения" />
+         </columns>
+      </TableView>
+      <MFXButton buttonType="RAISED" layoutX="713.0" layoutY="62.0" prefHeight="26.0" prefWidth="75.0" text="Найти все" />
+      <MFXButton buttonType="RAISED" layoutX="12.0" layoutY="295.0" text="Очистить" />
+      <VBox layoutX="125.0" layoutY="46.0" spacing="40.0">
+         <children>
+            <TextField fx:id="txtOrderID" prefHeight="26.0" prefWidth="190.0" promptText="Введите № клиента" />
+            <TextField fx:id="txtFIOClient" prefHeight="26.0" prefWidth="150.0" promptText="Введите ФИО клиента" />
+            <TextField fx:id="txtFIOManager" prefHeight="26.0" prefWidth="150.0" promptText="Введите пол клиента" />
+            <TextField fx:id="txtDetailName" prefHeight="26.0" prefWidth="150.0" promptText="Введите дату рождения клиента" />
+         </children>
+      </VBox>
+      <Text layoutX="20.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление/Обновление данных заказа">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="341.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск/Удаление данных в таблице">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="searchOrderId" layoutX="429.0" layoutY="63.0" prefHeight="26.0" prefWidth="75.0" promptText="№ Клиента" />
+      <Separator layoutX="325.0" layoutY="3.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="5.0" />
+      <Separator layoutX="-1.0" layoutY="347.0" prefHeight="6.0" prefWidth="329.0" />
+   </children>
+</AnchorPane>

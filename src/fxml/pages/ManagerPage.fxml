@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.pages.ManagerPageController">
+    <children>
+        <Text layoutX="345.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="№ Заказа">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+        <MFXButton buttonType="RAISED" layoutX="503.0" layoutY="137.0" onAction="#searchEmployee" prefHeight="26.0" prefWidth="75.0" text="Найти" />
+        <VBox layoutX="99.0" layoutY="237.0" spacing="12.0" />
+      <VBox layoutX="24.0" layoutY="125.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="№ Заказа" />
+              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО Клиента" />
+              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Менеджер" />
+              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Название детали" />
+              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Количество" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Совместимость" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Сумма заказа" />
+         </children>
+      </VBox>
+        <MFXButton buttonType="RAISED" layoutX="591.0" layoutY="137.0" onAction="#deleteEmployee" prefHeight="26.0" prefWidth="75.0" text="Удалить" />
+        <MFXButton buttonType="RAISED" layoutX="109.0" layoutY="453.0" onAction="#updateEmployee" text="Обновить" />
+        <MFXButton buttonType="RAISED" layoutX="208.0" layoutY="453.0" onAction="#insertEmployee" prefHeight="26.0" prefWidth="108.0" text="Добавить заказ" />
+        <Text layoutX="12.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Консоль результата" />
+        <TextArea fx:id="resultConsole" layoutX="12.0" layoutY="543.0" prefHeight="122.0" prefWidth="303.0" />
+        <TableView fx:id="employeeTable" layoutX="345.0" layoutY="180.0" onMouseClicked="#getSelected" prefHeight="485.0" prefWidth="934.0">
+            <columns>
+                <TableColumn fx:id="colOrderId" prefWidth="62.4000244140625" text="№ Заказа" />
+                <TableColumn fx:id="colFIOClient" prefWidth="200.0" text="ФИО Клиента" />
+                <TableColumn fx:id="colFIOManager" prefWidth="200.0" text="Менеджер" />
+                <TableColumn fx:id="colDetailName" prefWidth="120.0" text="Название детали" />
+                <TableColumn fx:id="colQuantityDetails" minWidth="0.0" prefWidth="79.20001220703125" text="Количество" />
+            <TableColumn fx:id="colCarBrandName" prefWidth="149.5999755859375" text="Совместимость" />
+            <TableColumn fx:id="colOrderPrice" prefWidth="125.5999755859375" text="Сумма заказа" />
+            </columns>
+        </TableView>
+        <MFXButton buttonType="RAISED" layoutX="683.0" layoutY="137.0" onAction="#searchAllEmployees" prefHeight="26.0" prefWidth="75.0" text="Найти все" />
+        <MFXButton buttonType="RAISED" layoutX="12.0" layoutY="453.0" onAction="#clearTextFields" text="Очистить" />
+      <VBox layoutX="122.0" layoutY="121.0" spacing="20.0">
+         <children>
+            <TextField fx:id="txtOrderID" prefHeight="26.0" prefWidth="190.0" promptText="Введите № заказа" />
+                <TextField fx:id="txtFIOClient" prefHeight="26.0" prefWidth="150.0" promptText="Введите ФИО клиента" />
+                <TextField fx:id="txtFIOManager" prefHeight="26.0" prefWidth="150.0" promptText="Введите менеджера" />
+                <TextField fx:id="txtDetailName" prefHeight="26.0" prefWidth="150.0" promptText="Введите название " />
+                <TextField fx:id="txtQuantityDetails" prefHeight="26.0" prefWidth="150.0" promptText="Введите количество" />
+            <TextField fx:id="txtCarBrandName" prefHeight="26.0" prefWidth="150.0" promptText="Введите совместимость" />
+            <TextField fx:id="txtOrderPrice" prefHeight="26.0" prefWidth="150.0" promptText="Введите сумму заказа" />
+         </children>
+      </VBox>
+      <AnchorPane layoutY="-1.0" prefHeight="79.0" prefWidth="1300.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Text fill="WHITE" layoutX="472.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Рабочее окно менеджера">
+               <font>
+                  <Font size="25.0" />
+               </font></Text>
+            <ImageView fitHeight="33.0" fitWidth="53.0" layoutX="1235.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/profile_icon.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="1109.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вы вошли как">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="1217.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Менеджер">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Separator layoutX="1085.0" layoutY="3.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="6.0" />
+            <Separator layoutX="91.0" layoutY="2.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="6.0" />
+            <ImageView fitHeight="33.0" fitWidth="53.0" layoutX="32.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/exit_icon.png" />
+               </image>
+            </ImageView>
+            <MFXButton fx:id="exitButton" buttonType="RAISED" layoutX="21.0" layoutY="44.0" onAction="#getSelectedExitButton" text="Выйти" />
+         </children></AnchorPane>
+      <Text layoutX="17.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление/Обновление данных заказа">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="345.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск/Удаление заказов в таблице">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+        <TextField fx:id="searchOrderId" layoutX="414.0" layoutY="137.0" prefHeight="26.0" prefWidth="70.0" promptText="№ Заказа" />
+      <Separator layoutX="326.0" layoutY="78.0" orientation="VERTICAL" prefHeight="602.0" prefWidth="6.0" />
+      <Separator layoutX="-1.0" layoutY="497.0" prefHeight="6.0" prefWidth="329.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.tables.OrderTableController">
+   <children>
+      <Text layoutX="341.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="№ Заказа">
+         <font>
+            <Font size="13.0" />
+         </font></Text>
+      <MFXButton buttonType="RAISED" layoutX="499.0" layoutY="64.0" onAction="#searchOrder" prefHeight="26.0" prefWidth="75.0" text="Найти" />
+      <VBox layoutX="99.0" layoutY="237.0" spacing="12.0" />
+      <VBox layoutX="27.0" layoutY="50.0" spacing="29.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="№ Заказа" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="№ Клиента" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Менеджера" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Автомобиля" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Дата заказа" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Сумма заказа" />
+         </children>
+      </VBox>
+      <MFXButton buttonType="RAISED" layoutX="588.0" layoutY="64.0" onAction="#deleteOrder" prefHeight="26.0" prefWidth="75.0" text="Удалить" />
+      <MFXButton buttonType="RAISED" layoutX="110.0" layoutY="327.0" onAction="#updateOrder" text="Обновить" />
+      <MFXButton buttonType="RAISED" layoutX="207.0" layoutY="326.0" onAction="#insertOrder" prefHeight="26.0" prefWidth="108.0" text="Добавить заказ" />
+      <Text layoutX="12.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Консоль результата" />
+      <TextArea fx:id="resultConsole_OrderTable" layoutX="12.0" layoutY="413.0" prefHeight="122.0" prefWidth="303.0" />
+      <TableView fx:id="orderTable" layoutX="341.0" layoutY="107.0" onMouseClicked="#getSelected" prefHeight="427.0" prefWidth="751.0">
+         <columns>
+            <TableColumn fx:id="colOrderID_OrderTable" prefWidth="108.80001831054688" text="№ Заказа" />
+            <TableColumn fx:id="colClientID_OrderTable" prefWidth="102.39996337890625" text="№ Клиента" />
+            <TableColumn fx:id="colManagerID_OrderTable" prefWidth="114.4000244140625" text="ID Менеджера" />
+            <TableColumn fx:id="colAutoID_OrderTable" prefWidth="127.20001220703125" text="ID Автомобиля" />
+            <TableColumn fx:id="colDateOrder_OrderTable" minWidth="0.0" prefWidth="145.5999755859375" text="Дата заказа" />
+            <TableColumn fx:id="colOrderPrice_OrderTable" prefWidth="155.19989013671875" text="Сумма заказа" />
+         </columns>
+      </TableView>
+      <MFXButton buttonType="RAISED" layoutX="679.0" layoutY="64.0" onAction="#searchAllOrders" prefHeight="26.0" prefWidth="75.0" text="Найти все" />
+      <MFXButton buttonType="RAISED" layoutX="12.0" layoutY="327.0" onAction="#clearTextFields" text="Очистить" />
+      <VBox layoutX="125.0" layoutY="46.0" spacing="20.0">
+         <children>
+            <TextField fx:id="txtOrderID_OrderTable" prefHeight="26.0" prefWidth="190.0" promptText="Введите № заказа" />
+            <TextField fx:id="txtClientID_OrderTable" prefHeight="26.0" prefWidth="150.0" promptText="Введите № клиента" />
+            <TextField fx:id="txtManagerID_OrderTable" prefHeight="26.0" prefWidth="150.0" promptText="Введите ID менеджера" />
+            <TextField fx:id="txtAutoID_OrderTable" prefHeight="26.0" prefWidth="150.0" promptText="Введите ID автомобиля " />
+            <TextField fx:id="txtDateOrder_OrderTable" prefHeight="26.0" prefWidth="150.0" promptText="Введите дату заказа" />
+            <TextField fx:id="txtOrderPrice_OrderTable" prefHeight="26.0" prefWidth="150.0" promptText="Введите сумму заказа" />
+         </children>
+      </VBox>
+      <Text layoutX="20.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление/Обновление данных заказа">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="341.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск/Удаление данных в таблице">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="searchOrderID_OrderTable" layoutX="410.0" layoutY="64.0" prefHeight="26.0" prefWidth="70.0" promptText="№ Заказа" />
+      <Separator layoutX="325.0" layoutY="3.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="5.0" />
+      <Separator layoutX="-1.0" layoutY="369.0" prefHeight="6.0" prefWidth="329.0" />
+   </children>
+</AnchorPane>

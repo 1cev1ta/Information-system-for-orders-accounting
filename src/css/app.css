@@ -1,0 +1,22 @@
+/**************************************************
+ * Toggle Buttons
+**************************************************/
+.mfx-toggle-button {
+	-fx-font-family: 'Visby Round CF Medium';
+	-fx-text-fill: -mfx-text-he;
+}
+
+.mfx-toggle-button .text {
+	-fx-font-smoothing-type: lcd;
+}
+
+#customToggleButton {
+	-mfx-main: -common-gradient;
+	-mfx-secondary: #5E0BA8;
+	-fx-text-fill: #5E0BA8;
+}
+
+#customToggleButton .mfx-ripple-generator {
+	-mfx-ripple-color: -common-gradient;
+	-fx-opacity: 0.5;
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.pages.LoginPageController">
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="repairLogo" fitHeight="220.0" fitWidth="225.0" layoutX="65.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../assets/login_repair_logo.png" />
+                    </image>
+                </ImageView>
+                <Text fx:id="logoText" fill="WHITE" layoutX="138.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Details ">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Text>
+            </children></AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="groupPeopleLogo" fitHeight="73.0" fitWidth="79.0" layoutX="159.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../assets/people_team_icon.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="passwordFieldLogo" fitHeight="28.0" fitWidth="28.0" layoutX="100.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../assets/password_icon_autorization.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="loginFieldLogo" fitHeight="28.0" fitWidth="28.0" layoutX="100.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../assets/user_icon_autorization.png" />
+                    </image>
+                </ImageView>
+                <MFXTextField fx:id="loginField" floatMode="ABOVE" layoutX="137.0" layoutY="186.0" prefHeight="49.0" prefWidth="135.0" promptText="Логин" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                <MFXPasswordField fx:id="passwordField" floatMode="ABOVE" layoutX="137.0" layoutY="260.0" prefHeight="49.0" prefWidth="135.0" promptText="Пароль" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                <MFXButton fx:id="authorizationButton" buttonType="RAISED" layoutX="150.0" layoutY="337.0" onAction="#loginButtonOnAction" prefHeight="34.0" prefWidth="91.0" style="-fx-background-color: #0598ff;" text="Войти" textFill="WHITE" />
+                <Text fx:id="AuthorizationText" fill="#0598ff" layoutX="136.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Авторизация" textAlignment="CENTER">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="50.0" layoutY="384.0" prefHeight="62.0" prefWidth="291.0" textFill="#ff2c2c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

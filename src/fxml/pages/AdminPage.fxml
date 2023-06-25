@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.pages.AdminPageController">
+   <left>
+      <VBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="121.0" spacing="60.0" BorderPane.alignment="CENTER">
+         <children>
+            <MFXButton fx:id="orderTableButton" buttonType="RAISED" onAction="#btnOrderTable" prefHeight="55.0" prefWidth="122.0" style="-fx-background-color: #0598ff;" text="Заказ" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MFXButton>
+            <MFXButton fx:id="managerTableButton" buttonType="RAISED" onAction="#btnManagerTable" prefHeight="55.0" prefWidth="124.0" style="-fx-background-color: #0598ff;" text="Менеджер" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MFXButton>
+            <MFXButton fx:id="clientTableButton" buttonType="RAISED" onAction="#btnClientTable" prefHeight="55.0" prefWidth="123.0" style="-fx-background-color: #0598ff;" text="Клиент" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MFXButton>
+            <MFXButton fx:id="detailsTableButton" buttonType="RAISED" onAction="#btnDetailsTable" prefHeight="55.0" prefWidth="122.0" style="-fx-background-color: #0598ff;" text="Детали" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MFXButton>
+            <MFXButton fx:id="autoTableButton" buttonType="RAISED" onAction="#btnAutomobileTable" prefHeight="55.0" prefWidth="154.0" style="-fx-background-color: #0598ff;" text="Автомобиль" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <top>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="79.0" prefWidth="1300.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="473.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Рабочее окно администратора">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="33.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@../../assets/exit_icon.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="79.0" prefWidth="3.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="2.0" />
+            <ImageView fitHeight="33.0" fitWidth="53.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1223.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../../assets/profile_icon.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Администратор" AnchorPane.leftAnchor="1190.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Вы вошли как" AnchorPane.leftAnchor="1080.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator orientation="VERTICAL" prefHeight="79.0" prefWidth="0.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1060.0" AnchorPane.topAnchor="2.0" />
+            <MFXButton fx:id="exitButton_Admin" buttonType="RAISED" onAction="#getSelectedExitButton" text="Выйти" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
