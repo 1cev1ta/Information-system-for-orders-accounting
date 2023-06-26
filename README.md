@@ -140,6 +140,8 @@ This section  contains all the main frameworks/libraries used in the project dev
 * [![SceneBuilder][SceneBuilder.com]][SceneBuilder-url]
 * [![Figma][Figma.com]][Figma-url]
 * [![MaterialFX][MaterialFX.com]][MaterialFX-url]
+* [![SQL Server][SQLServer.com]][SQLServer-url]
+* [![ErWin][ErWin.com]][ErWin-url]
 
 The IntelliJ IDEA development environment was selected to implement the functional part of the user interface.
 The JavaFX platform was used to write the code.
@@ -272,3 +274,7 @@ I would also like to recommend some useful books for programmers:
 [Figma-url]: https://www.figma.com/
 [MaterialFX.com]: https://img.shields.io/badge/MaterialFX-0769AD?style=for-the-badge&logo=matealfx&logoColor=white
 [MaterialFX-url]: https://github.com/palexdev/MaterialFX
+[SQLServer.com]: https://img.shields.io/badge/Microsoft%20SQL%20Server-4A4A55?style=for-the-badge&logo=microsoftSQLServer&logoColor=FFFF00
+[SQLServer-url]: https://www.microsoft.com/ru-ru/sql-server/sql-server-2019
+[ErWin.com]: https://img.shields.io/badge/ErWIN-563D7C?style=for-the-badge&logo=erwin&logoColor=white
+[Erwin-url]: https://www.erwin.com/products/erwin-data-modeler/
