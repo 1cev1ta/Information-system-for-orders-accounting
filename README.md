@@ -30,8 +30,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+    <img src="src/assets/program_logo.png" alt="Logo" width="60" height="60">
   </a>
 
   <h3 align="center">Information system for orders accounting</h3>
@@ -47,15 +47,13 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#database-engineering">Database Engineering</a></li>
+    <li><a href="#testing-database">Testing Database</a></li>
+    <li><a href="#built-with">Build With</a></li>
+    <li><a href="#creating-ui">Creating UI</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#references">References</a></li>
   </ol>
 </details>
 
@@ -64,7 +62,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+ <a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+    <img src="images\diagram_company.png" alt="Logo">
+  </a>
 
 There are many great JavaFX project templates available on GitHub; however, I didn't find one that really met my needs, so I created this program. This is a program from my thesis qualification work and it provides functionality for the work of managers of the company's sales department.
 
@@ -78,12 +78,58 @@ The tasks of the work were:
 * Substantiate decisions to ensure the operational and information security of the developed system;
 * Conduct an economic calculation of the costs of developing the system.
 
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+    <img src="images\zadachi_screen.png" alt="Logo">
+  </a>
+
 This repository provides a direct implementation of the user interface.
 In the future, the project can be developed and supplemented with new commits.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
+
+### Database Engineering
+
+This section describes the design steps of the project database. 
+
+* As a result of the first phase of database design-conceptual design of the model, a conceptual database model was created in the Chen standard, which displays the entities, attributes and relationships between them.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\model_chena.png" alt="Logo">
+</a>
+
+* As a result of the second stage of database design - logical design of the data model, a database schema was created in the IDEF1X standard in the ERwin environment, which contains tables, relationships between tables, attributes and restrictions.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\model_logicheskaya.png" alt="Logo">
+</a>
 
 
+
+* The next stage of work is the selection of DBMS. DBMS is a fundamental component of the information system, on which its performance, reliability and scalability depend. The choice of a suitable DBMS should be based on a number of factors including functionality, performance, scalability, security, GUI convenience, and integration with other applications. The table on the slide shows a comparison of three popular DBMSs. Looking at it, we can conclude that Microsoft SQL Server and Oracle Database look better against the PostgreSQL background. In addition, Microsoft SQL Server also has a couple of obvious advantages - a more understandable and easy-to-use graphical interface and integration with other Microsoft products such as Excel, Power BI, Azure. I also personally worked with Microsoft SQL Server and have a positive user experience, which is why this particular DBMS was chosen in this work.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\choose_subd.png" alt="Logo">
+</a>
+
+* After the final selection of the DBMS, I generated a database in it and carried out the transfer of the final version of the logical model, thereby starting the physical design stage. This slide shows a physical data model built in Microsoft SQL Server Management Studio. All information in the database is divided into tables, which are the entities of a particular business object or process. The diagram shows the relationships between the tables of the created database, as well as the primary and foreign keys of the tables.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\fiz_sheme.png" alt="Logo">
+</a>
+
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
+
+### Testing Database
+
+Testing the operation of the database was carried out using SQL queries. The slide shows two queries that clearly show that the data is displayed correctly and the implementation of business logic is structured correctly.
+* The first query displays detailed information about customers who have ordered more than 150,000.
+* The second query displays all parts that were sold until 2020 with a part price of more than 500,000.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\testing_database.png" alt="Logo">
+</a>
+
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 ### Built With
 
@@ -111,28 +157,79 @@ The advantages of SceneBuilder are that it:
 * integrates with IntelliJ IDEA and natively supports JavaFX;
 * has a convenient visual representation of the user interface.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\table_sr.png" alt="Logo">
+</a>
+
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Creating UI
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+As a result of working on the creation of the user interface, several windows of the program were created. Logically, the program is divided into three parts: the introductory user authorization window, the manager working window and the administrator working panel.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+- The opening window of the application is as follows.
+At the initial stage, the program asks the user to enter information for authorization in the application: login and password.
+In the program, you can log in as a manager or administrator.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\autorization_screen.png" alt="Logo">
+</a>
+
+When you enter the data that gives access to the manager level, you go to a new application window - the manager work window.
+
+Conditionally, the manager's work window can be divided into three functional units: the area for adding/updating order data, the order table with the order search/delete function, and the result console to display information about the success/failure of interim operations.
+The manager's work window has extensive functionality, which includes:
+1. [x] Add a new order
+2. [x] Updating Existing Order Data
+3. [x] Delete an irrelevant order
+4. [x] Search for an individual order by its No.
+5. [x] Output of all orders issued to date
+
+All these functions allow the manager to work efficiently with customer orders stored in the database.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\window_manager.png" alt="Logo">
+</a>
+
+When we pass authorization in the application as an administrator, we get into the administrator's working window.
+
+You can see the general view of the window below. It has a side menu with the selection of a specific table from the database. The administrator can select any of the tables: 
+* Order
+* Manager
+* Customer
+* Details 
+* Car
+
+With this, he has an advantage over the manager, who has access only to the order table. This ensures the integrity of the data and its safety from unauthorized access.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\window_administrator.png" alt="Logo">
+</a>
+
+After selecting a specific menu item, the corresponding table opens in front of the administrator and the functions for adding/updating data in the table, as well as deleting and searching for data in the table become available. On the slide, you can see what the administrator window looks like when you select a menu item to work with the Order table.
+
+<a href="https://github.com/1cev1ta/Information-system-for-orders-accounting">
+<img src="images\choose_zakaz_admin.png" alt="Logo">
+</a>
+
+_Some user interface elements were created based on the MaterialFX library. If you want to use it in your project then here is the link: [MaterialFX](https://github.com/palexdev/MaterialFX)_
+
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
-Boris Spirin - [@spi_rin](https://t.me/spi_rin) - bs_dev@bk.com
+Boris Spirin - [telegram](https://t.me/spi_rin) - email: bs_dev@bk.com
+
+My LinkedIn Profile - [tap here](https://www.linkedin.com/in/boris-spirin-74ab55280/)
 
 Project Link: [https://github.com/1cev1ta/Information-system-for-orders-accounting](https://github.com/1cev1ta/Information-system-for-orders-accounting)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## References
 
 Below I want to list the useful resources that helped me in developing the project. Perhaps they can help you too!
 
@@ -146,7 +243,7 @@ I would also like to recommend some useful books for programmers:
 * [Bloch, J. Effective Java: Programming Language Guide.]
 * [Shildt, G. Java. Full guidance.]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to top</a>)</p>
 
 
 
